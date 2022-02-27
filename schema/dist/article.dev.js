@@ -16,3 +16,15 @@ exports.delete_cate_schema = {
     id: id
   }
 };
+exports.get_cate_schema = {
+  params: {
+    id: id
+  }
+};
+exports.update_cate_schema = {
+  body: {
+    id: id,
+    name: name,
+    alias: alias
+  }
+};

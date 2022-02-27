@@ -54,7 +54,12 @@ app.use('/my', userinfoRouter); // 导入并使用文章分类路由模块
 var artCateRouter = require('./router/artcate'); // 为文章分类的路由挂载统一的访问前缀 /my/article
 
 
-app.use('/my/article', artCateRouter); //错误中间件
+app.use('/my/article', artCateRouter); // 导入并使用文章路由模块
+
+var articleRouter = require('./router/article'); // 为文章的路由挂载统一的访问前缀 /my/article
+
+
+app.use('/my/article', articleRouter); //错误中间件
 
 app.use(function (err, req, res, next) {
   console.log(err.name);
